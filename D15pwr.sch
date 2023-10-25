@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 4
+Sheet 4 4
 Title "RTB D15 Decoder"
 Date "2023-10-24"
 Rev "2"
@@ -75,7 +75,7 @@ F 3 "~" H 9600 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L RTB_Parts:DRV8847RTER IC1
+L RTB:DRV8847RTER IC1
 U 1 1 60B966B6
 P 3150 4450
 F 0 "IC1" H 3950 5100 50  0000 C CNN
@@ -479,7 +479,7 @@ Wire Wire Line
 Wire Wire Line
 	2350 3700 3750 3700
 $Comp
-L RTB_Parts:TPS22810DRVR U4
+L RTB:TPS22810DRVR U4
 U 1 1 60F57C6B
 P 3850 1950
 F 0 "U4" H 3850 2615 50  0000 C CNN
@@ -561,7 +561,7 @@ Wire Wire Line
 Wire Wire Line
 	3100 1000 3100 1650
 $Comp
-L RTB_Parts:NCP730BMT330TBG IC2
+L RTB:NCP730BMT330TBG IC2
 U 1 1 612F6C4A
 P 9150 1500
 F 0 "IC2" H 9850 1765 50  0000 C CNN
@@ -577,12 +577,7 @@ F 9 "NCP730BMT330TBG" H 10400 900 50  0001 L CNN "Manufacturer_Part_Number"
 	1    9150 1500
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	8100 2200 8450 2200
 Connection ~ 8100 2200
-Wire Wire Line
-	8450 2200 9150 2200
-Connection ~ 8450 2200
 Wire Wire Line
 	7550 1650 7550 1500
 Wire Wire Line
@@ -936,4 +931,6 @@ F 3 "" H 4750 4600 50  0001 C CNN
 	1    4750 4600
 	0    1    1    0   
 $EndComp
+Wire Wire Line
+	8100 2200 9150 2200
 $EndSCHEMATC

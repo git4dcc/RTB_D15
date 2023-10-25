@@ -222,7 +222,7 @@ uSENS1
 Text GLabel 2450 3400 0    50   Input ~ 0
 uSENS2
 $Comp
-L RTB_Parts:BNO055 U3
+L RTB:BNO055 U3
 U 1 1 60BAA614
 P 3250 5200
 AR Path="/60BAA614" Ref="U3"  Part="1" 
