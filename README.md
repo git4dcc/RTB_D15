@@ -19,8 +19,8 @@ The decoder has the following features,
 - Inrush limited
 - motor current limited to 500mA (short circuit protected)
 - max track voltage 18V
-- front/rear light driver
-- front/read LED light (solder pads)
+- front/rear light bulb connector
+- front/rear LED solder pads (alternative)
 - CPU heartbeat LED
 - 9-Axis motion sensor (optional)
 - fast firmware update within seconds on main tracks via DCCR
