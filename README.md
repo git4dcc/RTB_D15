@@ -36,3 +36,14 @@ The decoder has the following features,
 - 9-axis IMU: BNO055
 
 [Schematic](doc/D15_schematic.pdf) | [Layout](doc/D15_layout.pdf)
+
+# Firmware
+Filename structure: { **pcb** }{ **code** }{ **version** }.hex
+
+Example: **D15F0001**.hex
+
+|   | Description |
+| --- | --- |
+| **pcb** | Name of matching hardware (**D15**) |
+| **code** | Type of code contained (**R**=rom, **B**=bootloader, **F**=flash, **U**=bld update, **P**=UPDI factory code) |
+| **version** | Release version (**####**) |
