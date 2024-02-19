@@ -9,8 +9,8 @@ The D15 decoder is a drop in replacement of the original analog Minitrix (#11130
 
 The decoder has the following features,
 - **DCC**
-  - DCCA automatic logon
-  - DCCR protocol extension
+  - DCC-A automatic logon
+  - DCC-R protocol extension
 - **Railcom**
   - Channel 1/2
   - POM, xPOM
