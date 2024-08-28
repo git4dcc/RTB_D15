@@ -5,13 +5,14 @@
 
 The D15 decoder is a drop in replacement of the original analog Minitrix (#11130) PCB. The decoder is designed to integrate into the [RTB](https://rtb4dcc.de/concept/) digital control infrastructure.
 
-> <img src="https://www.spurweite-n.de/NDBPics/Minitrix/11130_1.jpg" width=300>
+> <img src="https://www.spurweite-n.de/NDBPics/Minitrix/11130_1.jpg" width=400>
 <br>
 
 The decoder has the following features,
 - **DCC**
   - DCC-A automatic logon
   - DCC-R protocol extension
+  - Service Mode Programming
 - **Railcom**
   - Channel 1/2
   - POM, xPOM
