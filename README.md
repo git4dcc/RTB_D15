@@ -17,23 +17,26 @@ The decoder has the following features,
   - Channel 1/2
   - POM, xPOM
   - DYN: Speed, QoS, Track-Voltage, Motor-Current, Temp, Distance travelled, Pitch/Yaw/Roll
-- 3x330uF buffer capacity (on PCB)
-- Inrush limited
-- motor current limited to 500mA (short circuit protected)
-- max track voltage 18V
-- front/rear light bulb connector
-- front/rear LED solder pads (alternative)
-- CPU heartbeat LED
-- 9-Axis motion sensor (optional)
+- 7-18V track voltage
+- <10mA idle power consumption (~20mA with motion sensor active)
+- heartbeat LED
+- adjustable max motor current (default 250mA)
+- over temp protection
+- Function output: LV/LR (dimmable headlights)
+- Function output: AUX1/AUX2 (dimmable) for driver cabin (LEDs on PCB)
+- Function output: AUX3/AUX4 logic level
+- Function output: AUX5/AUX6 open drain (each 250mA)
+- onboard 4x330uF buffer capacity (inrush limited)
+- optional 9-axis motion sensor
 - fast firmware update within seconds on main tracks via DCCR
 
 [more](https://rtb4dcc.de/hardware/decoder/d15/)
 
 # PCB
-<img src="https://rtb4dcc.de/wp-content/uploads/2023/06/D15_top.jpg" width=400><img src="https://rtb4dcc.de/wp-content/uploads/2023/06/D15_btm.jpg" width=400>
+<img src="https://rtb4dcc.de/wp-content/uploads/2024/09/D15_top.png" width=500> <img src="https://rtb4dcc.de/wp-content/uploads/2024/09/D15_btm.png" width=500>
 - 4-layer PCB, FR4, 1mm
 - CPU: AVR64DA32
-- Motor bridge: DRV8847
+- Motor bridge: DRV8231
 - Inrush limiter: TPS22810
 - 9-axis IMU: BNO055
 
