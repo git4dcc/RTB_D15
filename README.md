@@ -3,7 +3,7 @@
 [![Kicad_Libs](https://img.shields.io/badge/Kicad_Libs-29C7FF)](https://github.com/git4dcc/RTB_SamacSys)
 [![Apache License 2.0](https://img.shields.io/badge/license-Apache%20License%202.0-lightgray)](https://www.apache.org/licenses/LICENSE-2.0)
 
-My Homebrew [D15](https://rtb4dcc.de/hardware/decoder/d15/) decoder is a drop in replacement for the original analog Minitrix (#7230) PCB. The decoder is designed to integrate into the [RTB](https://rtb4dcc.de/concept/) digital control infrastructure.
+My Homebrew [D15](https://rtb4dcc.de/hardware/decoder/d15/) decoder is a drop in replacement for the original analog Minitrix (#11130) PCB. The decoder is designed to integrate into the [RTB](https://rtb4dcc.de/concept/) digital control infrastructure.
 
 <details>
 <summary>See also</summary>
@@ -95,7 +95,7 @@ Example: **D15F0001**.hex
 <img src="supplemental/images/D15_usecase1.JPG" width=400> <img src="supplemental/images/D15_usecase2.JPG" width=400>
 
 # YouTube
-See the D15 decoder in action.<br><br>
+See the D15 decoder (rev 0) in action.<br><br>
 [<img src="https://img.youtube.com/vi/xmjQG59Y9LQ/0.jpg" width=260>](https://youtu.be/xmjQG59Y9LQ)
 
 This project is intended for hobby use only and is distributed in accordance with the Apache License 2.0 agreement.
