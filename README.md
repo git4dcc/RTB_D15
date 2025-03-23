@@ -3,12 +3,35 @@
 [![Kicad_Libs](https://img.shields.io/badge/Kicad_Libs-29C7FF)](https://github.com/git4dcc/RTB_SamacSys)
 [![Apache License 2.0](https://img.shields.io/badge/license-Apache%20License%202.0-lightgray)](https://www.apache.org/licenses/LICENSE-2.0)
 
-The D15 decoder is a drop in replacement of the original analog Minitrix (#11130) PCB. The decoder is designed to integrate into the [RTB](https://rtb4dcc.de/concept/) digital control infrastructure.
+My Homebrew [D15](https://rtb4dcc.de/hardware/decoder/d15/) decoder is a drop in replacement for the original analog Minitrix (#7230) PCB. The decoder is designed to integrate into the [RTB](https://rtb4dcc.de/concept/) digital control infrastructure.
 
-> <img src="https://www.spurweite-n.de/NDBPics/Minitrix/11130_1.jpg" width=400>
+<details>
+<summary>See also</summary>
+
+- [RTB_D12 - custom](https://github.com/git4dcc/RTB_D12) (Fleischmann V100)
+- [RTB_D13 - custom](https://github.com/git4dcc/RTB_D13) (Minitrix coach)
+- [RTB_D16 - NEM651](https://github.com/git4dcc/RTB_D16)
+- [RTB_D20 - NEM651](https://github.com/git4dcc/RTB_D20)
+- [RTB_D21 - Next18](https://github.com/git4dcc/RTB_D21)
+- [RTB_D22 - Plux16](https://github.com/git4dcc/RTB_D22)
+- [RTB_D23 - NEM652](https://github.com/git4dcc/RTB_D23)
+
+
+</details>
+
+<details>
+<summary>User Guides</summary>
+
+- User Guide - DE
+- [User Guide - EN](https://rtb4dcc.de/rtb_decoder_reference_en/)
+
+</details>
+
+<img src="supplemental/images/D15_main.jpg" width=700>
 <br>
 
-The decoder has the following features,
+## Decoder features
+- **Minitirx V160** PCB decoder
 - **DCC**
   - DCC-A automatic logon
   - DCC-R protocol extension
@@ -16,39 +39,61 @@ The decoder has the following features,
 - **Railcom**
   - Channel 1/2
   - POM, xPOM
-  - DYN: Speed, QoS, Track-Voltage, Motor-Current, Temp, Distance travelled, Pitch/Yaw/Roll
+  - DYN: Speed, QoS, Track-voltage, Motor-current, AUX-current, Temp, Distance travelled
 - 7-18V track voltage
-- <10mA idle power consumption (~20mA with motion sensor active)
 - heartbeat LED
 - adjustable max motor current (default 250mA)
+- adjustable max AUX current (default 250mA)
 - over temp protection
-- Function output: LV/LR (dimmable headlights)
-- Function output: AUX1/AUX2 (dimmable) for driver cabin (LEDs on PCB)
+- Function output: LF/LR (dimmable, 1.4kHz), LED on PCB
+- Function output: AUX1/AUX2 (dimmable, 1.4kHz) for driver cabin (LEDs on PCB)
 - Function output: AUX3/AUX4 logic level
 - Function output: AUX5/AUX6 open drain (each 250mA)
-- onboard 4x330uF buffer capacity (inrush limited)
-- optional 9-axis motion sensor
-- fast firmware update within seconds on main tracks via DCCR
+- buffer capacitor 4x330uF
+- <10mA idle power consumption
+- Firmware update over main tracks via DCC-R protocol
 
-[more](https://rtb4dcc.de/hardware/decoder/d15/)
+# Hardware
+The current PCB layout uses SMD footprints with 0.5mm pitch and mainly 0402 parts. Reflow soldering is mandatory whereas handsoldering almost impossible.
 
-# PCB
-<img src="https://rtb4dcc.de/wp-content/uploads/2024/09/D15_top.png" width=500> <img src="https://rtb4dcc.de/wp-content/uploads/2024/09/D15_btm.png" width=500>
-- 4-layer PCB, FR4, 1mm
+<img src="supplemental/images/D15_top.jpg" width=600>
+<img src="supplemental/images/D16_btm.jpg" width=600>
+
+## PCB
+- 4-layer PCB, FR4, 0.8mm
 - CPU: AVR64DA32
 - Motor bridge: DRV8231
 - Inrush limiter: TPS22810
-- 9-axis IMU: BNO055
 
-[Schematic](doc/D15_schematic.pdf) | [Layout](doc/D15_layout.pdf)
+## Kicad
+[Schematic](doc/D12_schematic.pdf) | [Layout](doc/D12_layout.pdf) | [Gerber](gerber)
 
-# Firmware
+<details>
+<summary>Dependency</summary>
+<br>
+
+:yellow_circle: Requires my Kicad project library [RTB_SamacSys](https://github.com/git4dcc/RTB_SamacSys) in the same directory tree.
+
+</details>
+
+## Firmware
 Filename structure: { **pcb** }{ **code** }{ **version** }.hex
 
 Example: **D15F0001**.hex
 
 |   | Description |
 | --- | --- |
-| **pcb** | Name of matching hardware (**D15**) |
+| **pcb** | Name of matching hardware (**D12**) |
 | **code** | Type of code contained (**R**=rom, **B**=bootloader, **F**=flash, **U**=bld update, **P**=UPDI factory code) |
 | **version** | Release version (**####**) |
+
+[Firmware files](firmware)
+
+# Images
+<img src="supplemental/images/D15_usecase1.JPG" width=400> <img src="supplemental/images/D15_usecase2.JPG" width=400>
+
+# YouTube
+See the D15 decoder in action.<br><br>
+[<img src="https://img.youtube.com/vi/xmjQG59Y9LQ/0.jpg" width=260>](https://youtu.be/xmjQG59Y9LQ)
+
+This project is intended for hobby use only and is distributed in accordance with the Apache License 2.0 agreement.
