@@ -57,7 +57,7 @@ My Homebrew [D15](https://rtb4dcc.de/hardware/decoder/d15/) decoder is a drop in
 The current PCB layout uses SMD footprints with 0.5mm pitch and mainly 0402 parts. Reflow soldering is mandatory whereas handsoldering almost impossible.
 
 <img src="supplemental/images/D15_top.jpg" width=600>
-<img src="supplemental/images/D16_btm.jpg" width=600>
+<img src="supplemental/images/D15_btm.jpg" width=600>
 
 ## PCB
 - 4-layer PCB, FR4, 0.8mm
