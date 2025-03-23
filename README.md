@@ -27,7 +27,7 @@ My Homebrew [D15](https://rtb4dcc.de/hardware/decoder/d15/) decoder is a drop in
 
 </details>
 
-<img src="supplemental/images/D15_main.jpg" width=700>
+<img src="supplemental/images/D15_main.jpg" width=800>
 <br>
 
 ## Decoder features
@@ -50,20 +50,22 @@ My Homebrew [D15](https://rtb4dcc.de/hardware/decoder/d15/) decoder is a drop in
 - Function output: AUX3/AUX4 logic level
 - Function output: AUX5/AUX6 open drain (each 250mA)
 - buffer capacitor 4x330uF
+- optional 9-axis orientation sensor
 - <10mA idle power consumption
 - Firmware update over main tracks via DCC-R protocol
 
 # Hardware
 The current PCB layout uses SMD footprints with 0.5mm pitch and mainly 0402 parts. Reflow soldering is mandatory whereas handsoldering almost impossible.
 
-<img src="supplemental/images/D15_top.jpg" width=600>
-<img src="supplemental/images/D15_btm.jpg" width=600>
+<img src="supplemental/images/D15_top.jpg" width=800>
+<img src="supplemental/images/D15_btm.jpg" width=800>
 
 ## PCB
 - 4-layer PCB, FR4, 0.8mm
 - CPU: AVR64DA32
 - Motor bridge: DRV8231
 - Inrush limiter: TPS22810
+- 9-axis absolute-orientation sensor: BNO055
 
 ## Kicad
 [Schematic](doc/D12_schematic.pdf) | [Layout](doc/D12_layout.pdf) | [Gerber](gerber)
