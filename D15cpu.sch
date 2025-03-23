@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 2 4
 Title "RTB D15 Decoder"
 Date "2024-09-29"
-Rev "2"
+Rev "3"
 Comp "Frank Schumacher"
 Comment1 "Minitrix V160 (#12460)"
 Comment2 "D15.2"
@@ -26,10 +26,6 @@ F 3 "" H 4300 1300 50  0001 C CNN
 	1    4300 1300
 	1    0    0    -1  
 $EndComp
-Text GLabel 8600 5800 0    50   Input ~ 0
-V24.rx
-Text GLabel 8600 5500 0    50   Output ~ 0
-V24.tx
 $Comp
 L Device:C_Small C13
 U 1 1 5F92BC25
@@ -45,17 +41,6 @@ Wire Wire Line
 	4300 1300 4500 1300
 Connection ~ 3400 1100
 $Comp
-L Connector_Generic:Conn_01x08 J5
-U 1 1 5F7BB438
-P 8800 5400
-F 0 "J5" H 8880 5392 50  0000 L CNN
-F 1 "UDPI & Debug IF" H 8880 5301 50  0000 L CNN
-F 2 "Connector_PinHeader_1.27mm:PinHeader_2x04_P1.27mm_Vertical" H 8800 5400 50  0001 C CNN
-F 3 "~" H 8800 5400 50  0001 C CNN
-	1    8800 5400
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+3V3 #PWR0111
 U 1 1 5F7ECBE1
 P 3400 1100
@@ -65,17 +50,6 @@ F 2 "" H 3400 1100 50  0001 C CNN
 F 3 "" H 3400 1100 50  0001 C CNN
 	1    3400 1100
 	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR0129
-U 1 1 5F7F0CDF
-P 8600 5400
-F 0 "#PWR0129" H 8600 5250 50  0001 C CNN
-F 1 "+3V3" V 8615 5528 50  0000 L CNN
-F 2 "" H 8600 5400 50  0001 C CNN
-F 3 "" H 8600 5400 50  0001 C CNN
-	1    8600 5400
-	0    -1   -1   0   
 $EndComp
 Text Notes 4650 2800 0    50   ~ 0
 COM-1
@@ -117,10 +91,6 @@ Text Notes 4650 1900 0    50   ~ 0
 COM-0
 Text Notes 1500 2300 0    50   ~ 0
 COM-2\n
-Text GLabel 4150 1900 2    50   Input ~ 0
-V24.rx
-Text GLabel 4150 1800 2    50   Output ~ 0
-V24.tx
 Wire Wire Line
 	2450 1600 2700 1600
 Text GLabel 2450 1600 0    50   BiDi ~ 0
@@ -142,8 +112,6 @@ Wire Wire Line
 	2700 1800 2450 1800
 Wire Wire Line
 	2450 3000 2700 3000
-Wire Wire Line
-	2450 2400 2700 2400
 Text GLabel 2300 2100 0    50   Input ~ 0
 DCC-b
 Text GLabel 4550 2900 2    50   Input ~ 0
@@ -374,37 +342,10 @@ F 3 "~" H 2550 2100 50  0001 C CNN
 $EndComp
 Text GLabel 2450 1800 0    50   Input ~ 0
 UDCC-b
-$Comp
-L power:GND #PWR020
-U 1 1 5F5A6E17
-P 8600 5600
-F 0 "#PWR020" H 8600 5350 50  0001 C CNN
-F 1 "GND" V 8605 5472 50  0000 R CNN
-F 2 "" H 8600 5600 50  0001 C CNN
-F 3 "" H 8600 5600 50  0001 C CNN
-	1    8600 5600
-	0    1    1    0   
-$EndComp
-Text GLabel 8600 5100 0    50   Input ~ 0
-V24.rts
-Text GLabel 8600 5300 0    50   BiDi ~ 0
-UPDI
-Text GLabel 8600 5200 0    50   Output ~ 0
-V24.cts
 Text GLabel 2450 2200 0    50   Output ~ 0
 RCM.tx
 Wire Wire Line
-	3900 1800 4150 1800
-Wire Wire Line
-	4150 1900 3900 1900
-Text GLabel 2450 2400 0    50   Input ~ 0
-V24.cts
-Text GLabel 2450 2300 0    50   Output ~ 0
-V24.rts
-Wire Wire Line
 	2450 2200 2700 2200
-Wire Wire Line
-	2450 2300 2700 2300
 Wire Wire Line
 	3900 2900 4150 2900
 Text GLabel 7950 2750 0    50   Input ~ 0
@@ -625,7 +566,7 @@ Wire Notes Line
 Wire Notes Line
 	7000 6200 7000 4700
 Text Notes 7050 4850 0    50   ~ 0
-UPDI & Debug IF
+UPDI
 Text Notes 1500 4450 0    50   ~ 0
 9-axis IMU (optional)
 Text Notes 1450 900  0    50   ~ 0
@@ -863,21 +804,21 @@ $EndComp
 Wire Wire Line
 	4450 2600 4550 2600
 Text GLabel 4150 2100 2    50   Output ~ 0
-COUPLER.2
+AUX.6
 Wire Wire Line
 	3900 2100 4150 2100
 Text GLabel 4150 2400 2    50   Output ~ 0
-COUPLER.1
+AUX.5
 Wire Wire Line
 	4150 2400 3900 2400
 Wire Wire Line
 	8450 2550 8650 2550
 Text GLabel 9400 3950 0    50   Input ~ 0
-COUPLER.2
+AUX.6
 Wire Wire Line
 	7800 3950 7950 3950
 Text GLabel 7800 3950 0    50   Input ~ 0
-COUPLER.1
+AUX.5
 Wire Wire Line
 	9400 3950 9550 3950
 Wire Wire Line
@@ -929,7 +870,7 @@ Wire Wire Line
 Wire Wire Line
 	5950 5200 6000 5200
 Text GLabel 5950 5200 0    50   Input ~ 0
-LED.aux2
+AUX.4
 $Comp
 L Device:R R16
 U 1 1 6720702D
@@ -955,7 +896,7 @@ F 3 "~" H 6550 5200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 2450 3200 0    50   Output ~ 0
-LED.aux2
+AUX.4
 Wire Wire Line
 	2700 3200 2450 3200
 $Comp
@@ -1003,7 +944,7 @@ $EndComp
 Wire Wire Line
 	5950 5000 6000 5000
 Text GLabel 5950 5000 0    50   Input ~ 0
-LED.aux1
+AUX.3
 $Comp
 L Device:R R27
 U 1 1 67230716
@@ -1040,7 +981,7 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/40002016A.pdf" H 3300 2500 
 	1    0    0    -1  
 $EndComp
 Text GLabel 4150 3000 2    50   Output ~ 0
-LED.aux1
+AUX.3
 Wire Wire Line
 	3900 3000 4150 3000
 Wire Notes Line
@@ -1057,4 +998,21 @@ Text GLabel 9400 3550 0    50   Input ~ 0
 VTRK
 Wire Wire Line
 	9400 3550 9650 3550
+$Comp
+L Connector_Generic:Conn_01x01 J17
+U 1 1 674906F9
+P 8950 5450
+F 0 "J17" H 9030 5492 50  0000 L CNN
+F 1 "Conn_01x01" H 9030 5401 50  0001 L CNN
+F 2 "RTB:DummyNet-Connector" H 8950 5450 50  0001 C CNN
+F 3 "~" H 8950 5450 50  0001 C CNN
+	1    8950 5450
+	1    0    0    -1  
+$EndComp
+Text GLabel 8750 5450 0    50   BiDi ~ 0
+UPDI
+NoConn ~ 3900 1800
+NoConn ~ 3900 1900
+NoConn ~ 2700 2400
+NoConn ~ 2700 2300
 $EndSCHEMATC

@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 4
 Title "RTB D15 Decoder"
 Date "2024-09-29"
-Rev "2"
+Rev "3"
 Comp "Frank Schumacher"
 Comment1 "Minitrix V160 (#12460)"
 Comment2 ""
